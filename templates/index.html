@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Confession</title>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header">
+            <p>Confess Your Story Here!</p>
+        </div>
+        <div id="body">
+            <form method="POST">
+                <div id="confess">
+                    <textarea rows="1" cols="1" name = "confession" placeholder="write your story here"></textarea>
+                </div>
+                
+                <div id="submit">
+                    <button>confess your story</button>
+                </div>
+            </form>
+        </div>
+        <style>
+            
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: aqua;
+            }
+            #header{
+                width: 100%;
+                padding: 10px 0;
+                font-family: 'Ranchers', cursive;
+                font-weight: lighter;
+                background-color: #b14d3d;
+            }
+            #header p{
+                font-size: 50px;
+                
+                letter-spacing: 2px;
+                width: fit-content;
+                margin: 0 auto;
+            }
+            #body form{
+                display: block;
+                width: 70%;
+                margin: 0 auto;
+            }
+            #confess{
+                width: fit-content;
+                padding: 5px 10px;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+            #confess textarea{
+                width: 700px;
+                background-color: rgba(0, 0,0, 0);
+                font-size: 20px;
+                padding: 0 15px;
+                font-family: indie flower;
+                letter-spacing: 1px;
+                border: none;
+                border-bottom: solid black 2px;
+                user-select: none;
+
+            }
+            #confess textarea:focus, textarea:focus, select:focus{
+                outline: none;
+            }
+            #submit{
+                width: fit-content;
+                margin: 5px auto;
+            }
+            #submit button{
+                background-color: blue;
+                color: white;
+                font-family: 'Ranchers', cursive;
+                border: none;
+                font-size: 25px;
+                letter-spacing: 2px;
+                padding: 10px 15px;
+                border-radius: 15px;
+            }
+            #submit button:hover{
+                background-color: #00008B;
+            }
+        
+            
+        </style>
+        <script>
+            var textarea = document.querySelector('textarea');
+            textarea.addEventListener('keydown', autosize);
+                        
+            function autosize(){
+            var el = this;
+            setTimeout(function(){
+                el.style.cssText = 'height:auto; padding:0';
+                el.style.cssText = 'height:' + el.scrollHeight + 'px';
+            },0);
+            }
+        </script>
+    </body>
+</html>
